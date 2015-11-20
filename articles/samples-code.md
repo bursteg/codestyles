@@ -7,16 +7,16 @@
 # Code Styles
 
 ## Xml
-```xml
+<pre class="prettyprint lang-xml">
 <configuration>
     <appSettings>
         <add key="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=storagesample;AccountKey=nYV0gln9fT7bvY+rxu2iWAEyzPNITGkhM88J8HUoyofpK7C8fHcZc2kIZp6cKgYRUM74lHI84L50Iau1+9hPjB==" />
     </appSettings>
 </configuration>
-```
+</pre>
 
 ## C#
-```csharp
+<pre class="prettyprint lang-csharp">
 // Retrieve storage account from connection string.
 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
     CloudConfigurationManager.GetSetting("StorageConnectionString"));
@@ -35,10 +35,10 @@ using (var fileStream = System.IO.File.OpenRead(@"path\myfile"))
 {
     blockBlob.UploadFromStream(fileStream);
 }
-```
+</pre>
 
 ## Json
-```json
+<pre class="prettyprint lang-json">
 {
     "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
     "id": "ContactsList",
@@ -54,7 +54,7 @@ using (var fileStream = System.IO.File.OpenRead(@"path\myfile"))
     },
     "authentication": [{"type": "aad"}]
 }
-```
+</pre>
 
 ## Console
 ```bash
@@ -71,7 +71,7 @@ azure-storage@0.5.0 node_modules\azure-storage
 ```
 
 ## Python
-```python
+<pre class="prettyprint lang-python">
 blobs = []
 marker = None
 while True:
@@ -82,10 +82,10 @@ while True:
     marker = batch.next_marker
 for blob in blobs:
     print(blob.name)
-```
+</pre>
 
 ## Java
-```java
+<pre class="prettyprint lang-java">
 try
 {
     // Retrieve storage account from connection-string.
@@ -110,10 +110,10 @@ catch (Exception e)
     // Output the stack trace.
     e.printStackTrace();
 }
-```
+</pre>
 
 ## Objective-C
-```objective-c
+<pre class="prettyprint lang-objective-c">
  -(void)createContainer{
     // Create a storage account object from a connection string.
     AZSCloudStorageAccount *account = [AZSCloudStorageAccount accountFromConnectionString:@"DefaultEndpointsProtocol=https;AccountName=your_account_name_here;AccountKey=your_account_key_here"];
@@ -131,4 +131,4 @@ catch (Exception e)
         }
     }];
 }
-```
+</pre>
