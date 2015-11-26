@@ -7,16 +7,16 @@
 # Code Styles
 
 ## Xml
-<pre class="prettyprint lang-xml">
+```xml
 <configuration>
     <appSettings>
         <add key="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=storagesample;AccountKey=nYV0gln9fT7bvY+rxu2iWAEyzPNITGkhM88J8HUoyofpK7C8fHcZc2kIZp6cKgYRUM74lHI84L50Iau1+9hPjB==" />
     </appSettings>
 </configuration>
-</pre>
+```
 
 ## C#
-<pre class="prettyprint lang-csharp">
+```cs
 // Retrieve storage account from connection string.
 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
     CloudConfigurationManager.GetSetting("StorageConnectionString"));
@@ -35,10 +35,10 @@ using (var fileStream = System.IO.File.OpenRead(@"path\myfile"))
 {
     blockBlob.UploadFromStream(fileStream);
 }
-</pre>
+```
 
 ## Json
-<pre class="prettyprint lang-json">
+```json
 {
     "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
     "id": "ContactsList",
@@ -54,10 +54,10 @@ using (var fileStream = System.IO.File.OpenRead(@"path\myfile"))
     },
     "authentication": [{"type": "aad"}]
 }
-</pre>
+```
 
 ## Console
-```bash
+```sh
 azure-storage@0.5.0 node_modules\azure-storage
 +-- extend@1.2.1
 +-- xmlbuilder@0.4.3
@@ -71,7 +71,7 @@ azure-storage@0.5.0 node_modules\azure-storage
 ```
 
 ## Python
-<pre class="prettyprint lang-python">
+```python
 blobs = []
 marker = None
 while True:
@@ -82,10 +82,10 @@ while True:
     marker = batch.next_marker
 for blob in blobs:
     print(blob.name)
-</pre>
+```
 
 ## Java
-<pre class="prettyprint lang-java">
+```java
 try
 {
     // Retrieve storage account from connection-string.
@@ -110,10 +110,10 @@ catch (Exception e)
     // Output the stack trace.
     e.printStackTrace();
 }
-</pre>
+```
 
 ## Objective-C
-<pre class="prettyprint lang-objective-c">
+```m
  -(void)createContainer{
     // Create a storage account object from a connection string.
     AZSCloudStorageAccount *account = [AZSCloudStorageAccount accountFromConnectionString:@"DefaultEndpointsProtocol=https;AccountName=your_account_name_here;AccountKey=your_account_key_here"];
@@ -131,4 +131,4 @@ catch (Exception e)
         }
     }];
 }
-</pre>
+```
